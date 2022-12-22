@@ -6,8 +6,9 @@ import Catalog from './pages/Catalog';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Resgister';
+import Product from './pages/Product';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
+import PageNotFound from './pages/PageNotFound';
 
 function App() {
   return (
@@ -16,11 +17,13 @@ function App() {
       <Menu />
         <BrowserRouter>
           <Routes>
-              <Route default path="/home" element={<Home/>} />
+              <Route exact path="/home" element={<Home/>} />
               <Route exact path="/login" element={<Login/>} />
               <Route exact path="/register" element={<Register/>} />
+              <Route exact path="/product" element={<Product/>} />
               <Route exact path="/catalog" element={<Catalog/>} />
               <Route exact path="/cart" element={<Cart/>} />
+              <Route  path="*" element={<PageNotFound/>} />
           </Routes>
         </BrowserRouter>
       <Rodape />

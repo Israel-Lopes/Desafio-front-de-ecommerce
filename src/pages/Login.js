@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
+
 
 
 
@@ -12,7 +11,7 @@ class Login extends Component {
   passwordInput = React.createRef();
 
   handleLogin = async () => {
-    alert("Entrou");
+
     const PATH_SERVICE = 'http://localhost:8080';
     const LOGIN_SERVICE = '/login';
 
@@ -31,6 +30,7 @@ class Login extends Component {
         loginEmail: loginEmail,
         loginPassword: loginPassword,
       }),
+      timeout: 1000000,
     };
 
     await fetch(PATH_SERVICE + LOGIN_SERVICE, options)
@@ -40,8 +40,12 @@ class Login extends Component {
           Cookies.set('token_loja_online', data.userToken, { expires: 7, path: '/' });
           window.location.replace(PATH + HOME);
         }
+      })
+      .catch(error => {
+        console.error(error);
       });
-      //debugger;
+
+
   }
 
   // Usuario para teste: mn@gmail.com  : 123
