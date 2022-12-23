@@ -70,12 +70,12 @@ state = {
   
     if (!this.state) return null;
 
-    let total = 0;
-    this.state.cartItem.map(item => {
-      total += item.productPrice;
-      return total;
-    });
-    console.log(total)
+    // let total = 0;
+    // this.state.cartItem.map(item => {
+    //   total += item.productPrice;
+    //   return total;
+    // });
+    // console.log(total)
 
       return (
         <div class="container py-5 px-3 mx-auto">
@@ -99,7 +99,7 @@ state = {
                     ))}
                     <tr>
                     <td colspan="3" class="text-right">Total:</td>
-                    <td>R${this.state.total}</td>
+                    <td>R$0{this.state.total}</td>
                     <td></td>
                     </tr>
                  </tbody>
