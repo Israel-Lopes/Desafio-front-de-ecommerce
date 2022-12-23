@@ -16,6 +16,11 @@ code {
     monospace;
 }
 
+.banner-store {
+  background-image: url('img/banner-lojas.jpg');
+  background-position: center;
+}
+
 .margin-l1 {
   margin-left: 1rem;
 }
