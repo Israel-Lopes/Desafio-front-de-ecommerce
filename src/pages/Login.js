@@ -47,9 +47,6 @@ class Login extends Component {
 
 
   }
-
-  // Usuario para teste: mn@gmail.com  : 123
-  // ruan123@gmail.com : ruan123@gmail.com
   
   render() {
     return (

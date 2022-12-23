@@ -53,9 +53,7 @@ debugger;
     const COOKIE_CART = Cookies.get('cart_loja_online') || null;
     if (COOKIE_CART != null) {
       const COOKIE_CART = Cookies.get('cart_loja_online');
-      console.log('teste');
       let products = JSON.parse(COOKIE_CART);
-      console.log(products);
       products.push(PRODUCT);
       Cookies.set('cart_loja_online', JSON.stringify(products), { expires: 7, path: '/' });
     } 
@@ -63,7 +61,6 @@ debugger;
       let array = [];
       array.push(PRODUCT);
       Cookies.set('cart_loja_online', JSON.stringify(array), { expires: 7, path: '/' })
-      console.log(JSON.stringify(array));
     }
   }
 

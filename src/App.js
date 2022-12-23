@@ -2,7 +2,6 @@ import Banner from './componets/Banner';
 import Menu from './componets/Menu';
 import Rodape from './componets/Rodape';
 import Cart from './pages/Cart';
-import Catalog from './pages/Catalog';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Resgister';
@@ -21,7 +20,6 @@ function App() {
               <Route exact path="/login" element={<Login/>} />
               <Route exact path="/register" element={<Register/>} />
               <Route exact path="/product" element={<Product/>} />
-              <Route exact path="/catalog" element={<Catalog/>} />
               <Route exact path="/cart" element={<Cart/>} />
               <Route  path="*" element={<PageNotFound/>} />
           </Routes>

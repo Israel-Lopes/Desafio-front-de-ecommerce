@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import facebookLogoPNG from '../img/facebook.png';
+import instagramLogoPNG from '../img/instagram.png';
+
 
 class Rodape extends Component {
     render() {
@@ -32,10 +35,9 @@ class Rodape extends Component {
                         <div class="col-md-4">
                         <h5>Redes sociais</h5>
                         <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-2x"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.facebook.com/"><img className="logo-l15" src={facebookLogoPNG}/><i class="fab fa-facebook-f fa-2x"></i></a></li>
                             <li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
+                            <li class="list-inline-item"><img className="logo-l15" src={instagramLogoPNG}/><a href="https://www.instagram.com/"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
                         </ul>
                         </div>
                     </div>

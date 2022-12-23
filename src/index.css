@@ -1,5 +1,5 @@
 html {
-  zoom: 85%;
+  zoom: 95%;
 }
 
 body {
@@ -18,4 +18,18 @@ code {
 
 .margin-l1 {
   margin-left: 1rem;
+}
+
+.margin-l10 {
+  margin-left: 10rem;
+}
+.margin-l20 {
+  margin-left: 20rem;
+}
+.margin-l5 {
+  margin-left: 5rem;
+}
+
+.logo-l15 {
+    width: 15%;
 }

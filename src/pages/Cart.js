@@ -1,12 +1,33 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Cookies from 'js-cookie';
+import CartItem from '../componets/CartItem';
 
 class Cart extends Component {
+
+state = {
+  cartItem: []
+}
 
   productName = "";
   productPrice = 0;
   productDescription = "";
   productId = 0;
+
+  products = [];
+
+  addProductByCart = () => {
+    const COOKIE_CART = Cookies.get('cart_loja_online') || null;
+    if (COOKIE_CART != null) {
+      let products = JSON.parse(COOKIE_CART);
+      this.setState({ 
+        cartItem: products.map(item => item) 
+    });
+    } else { 
+            console.log('Buscar no banco'); 
+    }
+
+  }
 
   getProductById = async () => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -42,54 +63,40 @@ class Cart extends Component {
 
   componentDidMount() {
     this.getProductById();
+    this.addProductByCart();
   }
     render() {
   
-    // if (!this.state) return null;
+    if (!this.state) return null;
 
       return (
         <div class="container py-5 px-3 mx-auto">
-
-        
          <div class="container mt-5">
              <div class="row">
              <div class="col-lg-12">
                  <h1>Carrinho de compras</h1>
-               
                  <table class="table table-striped">
                  <thead>
                      <tr>
                      <th>Produto</th>
                      <th>Preço</th>
-                     <th>Quantidade</th>
+                     <th />
                      <th>Total</th>
                      <th></th>
                      </tr>
                  </thead>
                  <tbody>
-                     
-                     <tr>
-                     <td>Nome do produto</td>
-                     <td>R$100,00</td>
-                     <td>
-                         <input type="number" class="form-control" value="1" />
-                     </td>
-                     <td>R$100,00</td>
-                     <td>
-                         <button class="btn btn-danger btn-sm">Remover</button>
-                     </td>
-                     </tr>
-                     
-                     <tr>
-                     <td colspan="3" class="text-right">Total:</td>
-                     <td>R$100,00</td>
-                     <td></td>
-                     </tr>
+                    {this.state.cartItem.map(item => (
+                        <CartItem id={item.productId} name={item.productName} price={item.productPrice} />
+                    ))}
+                    <tr>
+                    <td colspan="3" class="text-right">Total:</td>
+                    <td>R$100,00</td>
+                    <td></td>
+                    </tr>
                  </tbody>
                  </table>
-                 
                  <div class="text-right mt-4 d-flex flex-row bd-highlight mb-3">
-                    
                     <Link to={{
                         pathname: '/home',
                         }}>
@@ -97,7 +104,6 @@ class Cart extends Component {
                             <button class="btn btn-primary">Continuar comprando</button>
                         </div>
                     </Link>
-
                     <div class="margin-l1">
                         <button class="btn btn-success">Finalizar compra</button>
                     </div>
@@ -105,7 +111,6 @@ class Cart extends Component {
              </div>
              </div>
          </div>
-         
        </div>
  
       );
