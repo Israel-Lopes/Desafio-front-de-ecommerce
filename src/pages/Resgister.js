@@ -53,7 +53,7 @@ class Register extends Component {
             <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="card shadow-lg">
-                <div class="card-header bg-primary text-white text-center">
+                <div class="card-header bc-teal text-white text-center">
                     <h3>Cadastro</h3>
                 </div>
                 <div class="card-body">
@@ -78,7 +78,7 @@ class Register extends Component {
                         <input type="password" class="form-control" id="confirm-password" placeholder="Confirme sua senha" ref={this.confirmPasswordInput}/>
                     </div>
                     <br />
-                    <button type="submit" class="btn btn-primary btn-block" onClick={this.handleRegister}>Cadastrar</button>
+                    <button type="submit" class="btn bc-teal btn-block text-white" onClick={this.handleRegister}>Cadastrar</button>
                     </form>
                 </div>
                 </div>

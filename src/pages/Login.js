@@ -55,7 +55,7 @@ class Login extends Component {
             <div class="row justify-content-center">
             <div class="col-lg-4">
                 <div class="card shadow-lg">
-                <div class="card-header bg-primary text-white text-center">
+                <div class="card-header bc-teal text-white text-center">
                     <h3>Login</h3>
                 </div>
                 <div class="card-body">
@@ -70,7 +70,7 @@ class Login extends Component {
                       <input type="password" class="form-control" id="password" placeholder="Sua senha" ref={this.passwordInput} />
                     </div>
                     <br />
-                    <button type="submit" class="btn btn-primary btn-block login_button" onClick={this.handleLogin}>Entrar</button>
+                    <button type="submit" class="btn bc-teal btn-block login_button text-white" onClick={this.handleLogin}>Entrar</button>
                     </form>
                     <br />
                     <Link class="small" to="/register">Registre-se</Link>

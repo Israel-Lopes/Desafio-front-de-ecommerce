@@ -37,7 +37,7 @@ class Product extends Component {
                 <Link to={{
                     pathname: '/product',
                     search: `?id=${this.props.id}`,
-                  }} class="btn btn-primary" id={this.props.id}>Ver detalhes</Link>
+                  }} class="btn btn-primary bc-teal" id={this.props.id}>Ver detalhes</Link>
                 
             </div>
          </div>

@@ -88,7 +88,7 @@ debugger;
                   pathname: '/cart',
                   state: { id: this.props.id, token: this.props.token },
                   }}>
-                    <button class="btn btn-primary btn-block mt-4" onClick={this.addProductByCart}>Comprar</button>
+                    <button class="btn bc-teal text-white btn-block mt-4" onClick={this.addProductByCart}>Comprar</button>
                 </Link>
             </div>
            </div>

@@ -85,3 +85,105 @@ curl -X POST -H "Content-Type: application/json" -d '{
 
   ]
 }' "http://localhost:8080/catalog"
+
+
+
+
+
+
+# Json-serve
+
+{
+"products": [
+{
+"id": 1,
+"name": "Camisa Polo Preta",
+"price": 89.99,
+"description": "Camisa polo confeccionada em algodão, com gola redonda e mangas curtas. Possui bolsos frontais e botões de pressão na parte superior."
+},
+{
+"id": 2,
+"name": "Calça Jeans Azul Escuro",
+"price": 149.99,
+"description": "Calça jeans confeccionada em algodão e elastano, com cós com botões e fechamento por zíper. Possui cinco bolsos e lavagem escura."
+},
+{
+"id": 3,
+"name": "Tênis Converse All Star Preto",
+"price": 199.99,
+"description": "Tênis confeccionado em lona e solado emborrachado. Possui cadarço e logo da marca na lateral."
+},
+{
+"id": 4,
+"name": "Moletom Com Capuz Cinza",
+"price": 99.99,
+"description": "Moletom confeccionado em algodão e poliéster, com capuz e bolsos frontais. Possui fechamento por zíper e logo da marca na parte superior."
+},
+{
+"id": 5,
+"name": "Bermuda Jeans Branca",
+"price": 129.99,
+"description": "Bermuda jeans confeccionada em algodão e elastano, com cós com botões e fechamento por zíper. Possui cinco bolsos e lavagem clara."
+},
+{
+"id": 6,
+"name": "Camisa Social Branca",
+"price": 199.99,
+"description": "Camisa social confeccionada em algodão, com colarinho e punhos com botões. Possui tres bolsos frontais e fechamento por botões na parte superior."
+},
+{
+"id": 7,
+"name": "Camisa Polo",
+"price": 59.99,
+"description": "Camisa polo de algodão, modelo clássico e versátil"
+},
+{
+"id": 8,
+"name": "Calça Jeans",
+"price": 99.99,
+"description": "Calça jeans slim fit, confeccionada em tecido de alta qualidade"
+},
+{
+"id": 9,
+"name": "Tênis Converse",
+"price": 149.99,
+"description": "Tênis Converse All Star, modelo clássico e confortável"
+},
+{
+"id": 10,
+"name": "Moletom Nike",
+"price": 79.99,
+"description": "Moletom Nike, confeccionado em tecido macio e confortável"
+},
+{
+"id": 11,
+"name": "Blazer Slim Fit",
+"price": 199.99,
+"description": "Blazer slim fit, confeccionado em lã de alta qualidade"
+},
+{
+"id": 12,
+"name": "Camiseta Estampada",
+"price": 39.99,
+"description": "Camiseta estampada, modelo casual e descolado"
+},
+{
+"id": 13,
+"name": "Cinto de Couro",
+"price": 49.99,
+"description": "Cinto de couro, modelo clássico e versátil"
+},
+{
+"id": 14,
+"name": "Óculos Ray-Ban",
+"price": 199.99,
+"description": "Óculos Ray-Ban Wayfarer, modelo clássico e atemporal"
+},
+{
+"id": 15,
+"name": "Relógio Fossil",
+"price": 299.99,
+"description": "Relógio Fossil, modelo elegante e de alta qualidade"
+}
+]
+}
