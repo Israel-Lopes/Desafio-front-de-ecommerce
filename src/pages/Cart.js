@@ -9,6 +9,7 @@ state = {
   cartItem: []
 }
 
+  
   productName = "";
   productPrice = 0;
   productDescription = "";
@@ -45,7 +46,7 @@ state = {
       },
       timeout: 1000000,
     };
-
+    
     await fetch(PATH_SERVICE + LOGIN_SERVICE, options)
       .then(response => response.json())
       .then( data => {
@@ -69,6 +70,13 @@ state = {
   
     if (!this.state) return null;
 
+    let total = 0;
+    this.state.cartItem.map(item => {
+      total += item.productPrice;
+      return total;
+    });
+    console.log(total)
+
       return (
         <div class="container py-5 px-3 mx-auto">
          <div class="container mt-5">
@@ -91,7 +99,7 @@ state = {
                     ))}
                     <tr>
                     <td colspan="3" class="text-right">Total:</td>
-                    <td>R$100,00</td>
+                    <td>R${this.state.total}</td>
                     <td></td>
                     </tr>
                  </tbody>
