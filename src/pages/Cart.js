@@ -6,6 +6,7 @@ import CartItem from '../componets/CartItem';
 class Cart extends Component {
 
 state = {
+  total: 0,
   cartItem: []
 }
 
@@ -24,8 +25,6 @@ state = {
       this.setState({ 
         cartItem: products.map(item => item) 
     });
-    } else { 
-            console.log('Buscar no banco'); 
     }
 
   }
@@ -70,12 +69,9 @@ state = {
   
     if (!this.state) return null;
 
-    // let total = 0;
-    // this.state.cartItem.map(item => {
-    //   total += item.productPrice;
-    //   return total;
-    // });
-    // console.log(total)
+    this.state.total = this.state.cartItem.reduce((total, item) => {
+      return total += item.productPrice != null ? item.productPrice : 0;
+    }, 0);
 
       return (
         <div class="container py-5 px-3 mx-auto">
@@ -99,7 +95,7 @@ state = {
                     ))}
                     <tr>
                     <td colspan="3" class="text-right">Total:</td>
-                    <td>R$0{this.state.total}</td>
+                    <td>R${this.state.total}</td>
                     <td></td>
                     </tr>
                  </tbody>
