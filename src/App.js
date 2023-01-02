@@ -1,19 +1,19 @@
-import Banner from './componets/Banner';
-import Menu from './componets/Menu';
-import Rodape from './componets/Rodape';
-import Cart from './pages/Cart';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Resgister';
-import Product from './pages/Product';
+import BannerItem from './componets/BannerItem';
+import MenuItem from './componets/MenuItem';
+import RodapeItem from './componets/RodapeItem';
+import Cart from './componets/pages/Cart';
+import Home from './componets/pages/Home';
+import Login from './componets/pages/Login';
+import Register from './componets/pages/Resgister';
+import Product from './componets/pages/Product';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import PageNotFound from './pages/PageNotFound';
+import PageNotFound from './componets/pages/PageNotFound';
 
 function App() {
   return (
     <div className="App">
-      <Banner />
-      <Menu />
+      <BannerItem />
+      <MenuItem />
         <BrowserRouter>
           <Routes>
               <Route exact path="/" element={<Home/>} />
@@ -25,7 +25,7 @@ function App() {
               <Route  path="*" element={<PageNotFound/>} />
           </Routes>
         </BrowserRouter>
-      <Rodape />
+      <RodapeItem />
     </div>
   );
 }

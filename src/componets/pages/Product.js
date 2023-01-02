@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import product_default from '../img/product_default.png';
+import product_default from '../../img/product_default.png';
 import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import { useUrlSearchParams } from "use-url-search-params";

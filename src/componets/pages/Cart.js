@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import CartItem from '../componets/CartItem';
+import CartItem from '../CartItem';
 
 class Cart extends Component {
 
