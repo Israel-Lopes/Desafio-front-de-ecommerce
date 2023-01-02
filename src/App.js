@@ -7,7 +7,7 @@ import Login from './componets/pages/Login';
 import Register from './componets/pages/Resgister';
 import Product from './componets/pages/Product';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import PageNotFound from './componets/pages/PageNotFound';
+import PageNotFound from './shared/PageNotFound';
 
 function App() {
   return (
