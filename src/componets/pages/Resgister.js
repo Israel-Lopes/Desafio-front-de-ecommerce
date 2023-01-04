@@ -20,7 +20,7 @@ class Register extends Component {
       const registrationPassword = this.passwordInput.current.value;
       const confirmPassword = this.confirmPasswordInput.current.value;
 
-      if (confirmPassword == registrationPassword) {
+      if (confirmPassword === registrationPassword) {
 
             const options = {
                 method: 'POST',
@@ -42,7 +42,6 @@ class Register extends Component {
                     }
                 });
       }
-      // Usuario para teste: mn@gmail.com  : 123
     }
 
     render() {

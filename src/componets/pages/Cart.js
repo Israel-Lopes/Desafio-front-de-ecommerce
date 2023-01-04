@@ -10,7 +10,6 @@ state = {
   cartItem: []
 }
 
-  
   productName = "";
   productPrice = 0;
   productDescription = "";
@@ -18,7 +17,7 @@ state = {
 
   products = [];
 
-  addProductByCart = () => {
+  addProductByCart = async () => {
     const COOKIE_CART = Cookies.get('cart_loja_online') || null;
     if (COOKIE_CART != null) {
       let products = JSON.parse(COOKIE_CART);
@@ -26,7 +25,6 @@ state = {
         cartItem: products.map(item => item) 
     });
     }
-
   }
 
   getProductById = async () => {
